@@ -16,6 +16,7 @@ resetBtn.addEventListener("touchend", reset);
 
 // calculate based on formula & output on screen
 // (number of seats x 68) < (1/2 x GVM - Tare weight) = NA, esle MA
+//handle empty inputs
 function calculate() {
     let gvm = document.getElementById("gvm").value;
     let tare = document.getElementById("tare").value;
