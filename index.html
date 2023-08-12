@@ -16,7 +16,7 @@
             </p>
         </header>
         <main>
-            <form id="input-form">
+            <form id="input-form" action="#" method="POST">
                 <label for="gvm">GVM:</label>
                 <input
                     id="gvm"
@@ -24,14 +24,13 @@
                     name="gvm"
                     placeholder="0kg"
                     required
-                /><br />
+                /><span>kg</span><br />
                 <label for="tare">Tare Weight:</label>
                 <input
                     id="tare"
                     type="number"
                     name="tare"
                     placeholder="0kg"
-                    required
                 /><br />
                 <label for="seats">Number of seats:</label>
                 <input
@@ -39,9 +38,8 @@
                     type="number"
                     name="seats"
                     placeholder="0"
-                    required
                 /><br />
-                <button id="submit-btn" type="button">Calculate</button><br />
+                <button id="submit-btn" type="submit">Calculate</button><br />
                 <button id="reset" type="reset">Reset</button>
             </form>
             <br />
