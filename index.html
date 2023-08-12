@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NZTA MANA Calculator</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Vehicle Class Calculator</h1>
+            <br />
+            <p id="description">
+                This calculator is for use to differentiate between vehicle
+                class MA and NA.
+            </p>
+        </header>
+        <main>
+            <form id="input-form">
+                <label for="gvm">GVM:</label>
+                <input
+                    id="gvm"
+                    type="number"
+                    name="gvm"
+                    placeholder="0kg"
+                    required
+                /><br />
+                <label for="tare">Tare Weight:</label>
+                <input
+                    id="tare"
+                    type="number"
+                    name="tare"
+                    placeholder="0kg"
+                    required
+                /><br />
+                <label for="seats">Number of seats:</label>
+                <input
+                    id="seats"
+                    type="number"
+                    name="seats"
+                    placeholder="0"
+                    required
+                /><br />
+                <button id="submit-btn" type="button">Calculate</button><br />
+                <button id="reset" type="reset">Reset</button>
+            </form>
+            <br />
+            <p id="output-container">
+                Vehicle class: <br />
+                <span id="output"></span>
+                <br />
+            </p>
+        </main>
+        <footer>
+            &copy;
+            <a href="https://maxclusive.solutions" target="_blank"
+                >maxclusive.solutions</a
+            >
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
