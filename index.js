@@ -39,10 +39,13 @@ function calculate(evt) {
 
     if (seatWeight < carWeight) {
         output.textContent = "NA";
+        output.style.color = "black";
     } else if (seatWeight > carWeight) {
         output.textContent = "MA";
+        output.style.color = "black";
     } else {
         output.textContent = "Please enter data.";
+        output.style.color = "red";
     }
 
     console.log(output.textContent);
