@@ -1,22 +1,28 @@
 // setup variables for input and output & access
-
+let numGvm = document.getElementById("gvm");
+let numTare = document.getElementById("tare");
+let numSeats = document.getElementById("seats");
 let submitBtn = document.getElementById("submit-btn");
-// let submitBtnVal = "";
-// if (submitBtn) {
-//     submitBtnVal = submitBtn.value;
-// }
-let output = document.getElementById("output");
 let resetBtn = document.getElementById("reset");
+let output = document.getElementById("output");
 
 // eventhandler
+// click
 submitBtn.addEventListener("click", calculate);
-submitBtn.addEventListener("touchend", calculate);
 resetBtn.addEventListener("click", reset);
+
+// touch
+submitBtn.addEventListener("touchend", calculate);
 resetBtn.addEventListener("touchend", reset);
+
+// keypress
+numGvm.addEventListener("keypress", enterKey);
+numTare.addEventListener("keypress", enterKey);
+numSeats.addEventListener("keypress", enterKey);
 
 // calculate based on formula & output on screen
 // (number of seats x 68) < (1/2 x GVM - Tare weight) = NA, esle MA
-//handle empty inputs
+// handle empty inputs
 function calculate() {
     let gvm = document.getElementById("gvm").value;
     let tare = document.getElementById("tare").value;
@@ -43,7 +49,10 @@ function calculate() {
     console.log(output.textContent);
 }
 
-// calculate(gvmVal, tareVal, seatsVal);
+// function for enter key
+function enterKey(evt) {
+    if (evt.keyCode == 13) submitBtn.click();
+}
 
 // reset button
 function reset() {
