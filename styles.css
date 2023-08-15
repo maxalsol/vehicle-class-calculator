@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: bisque;
+    background-color: rgb(154, 189, 232);
 }
 
 header {
@@ -33,6 +33,23 @@ main {
     align-items: center;
     justify-content: center;
     padding-top: 4rem;
+}
+
+label {
+    font-size: larger;
+}
+
+input[type="number"] {
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    box-shadow: 0 0 30px 8px rgba(0, 0, 0, 0.06);
+    font-size: larger;
+}
+
+input[type="number"]:hover {
+    box-shadow: 0;
 }
 
 input[type="number"]::placeholder {
@@ -65,8 +82,34 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+#submit-btn {
+    background-color: #015485;
+    color: aliceblue;
+    font-size: larger;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+#reset-btn {
+    margin: 3px 0;
+    background-color: #c55155;
+    color: aliceblue;
+    font-size: larger;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
 #output-container {
     text-align: center;
+    font-size: larger;
+}
+
+#output {
+    margin: 10px 0;
+    font-size: larger;
+    color: black;
 }
 
 footer {

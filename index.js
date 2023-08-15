@@ -4,7 +4,7 @@ let numGvm = document.getElementById("gvm");
 let numTare = document.getElementById("tare");
 let numSeats = document.getElementById("seats");
 let submitBtn = document.getElementById("submit-btn");
-let resetBtn = document.getElementById("reset");
+let resetBtn = document.getElementById("reset-btn");
 let output = document.getElementById("output");
 
 // eventhandler
@@ -39,13 +39,13 @@ function calculate(evt) {
 
     if (seatWeight < carWeight) {
         output.textContent = "NA";
-        output.style.color = "blue";
+        output.style.color = "black";
     } else if (seatWeight > carWeight) {
         output.textContent = "MA";
-        output.style.color = "blue";
+        output.style.color = "black";
     } else {
         output.textContent = "Please enter data.";
-        output.style.color = "red";
+        output.style.color = "#c55155";
     }
 
     console.log(output.textContent);
