@@ -116,8 +116,12 @@ input[type="number"] {
 }
 
 #output {
-    margin: 10px 0;
     font-size: larger;
+    margin: 10px;
+    width: 250px;
+    height: fit-content;
+    display: inline-block;
+    color: rgb(197, 81, 85);
 }
 
 footer {
