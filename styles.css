@@ -9,6 +9,7 @@ body {
     background-color: rgb(154, 189, 232);
     height: 100%;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -132,4 +133,10 @@ footer {
 
 a {
     color: black;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        margin-top: 50px;
+    }
 }
