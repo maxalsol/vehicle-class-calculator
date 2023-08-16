@@ -34,6 +34,8 @@ function calculate(evt) {
     let carWeight = 0.5 * (gvm - tare);
     let seatWeight = seats * 68;
 
+    // let result = "";
+
     console.log(seatWeight);
     console.log(carWeight);
 
@@ -48,7 +50,7 @@ function calculate(evt) {
         output.style.color = "#c55155";
     }
 
-    console.log(output.textContent);
+    // console.log(result);
 }
 
 //function for enter key
