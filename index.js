@@ -1,8 +1,7 @@
 // setup variables for input and output & access
-//let inputFields = document.getElementsByTagName("input");
-let numGvm = document.getElementById("gvm");
-let numTare = document.getElementById("tare");
-let numSeats = document.getElementById("seats");
+// let numGvm = document.getElementById("gvm");
+// let numTare = document.getElementById("tare");
+// let numSeats = document.getElementById("seats");
 let submitBtn = document.getElementById("submit-btn");
 let resetBtn = document.getElementById("reset-btn");
 let output = document.getElementById("output");
