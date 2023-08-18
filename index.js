@@ -16,11 +16,6 @@ resetBtn.addEventListener("click", reset);
 submitBtn.addEventListener("touchend", calculate);
 resetBtn.addEventListener("touchend", reset);
 
-// keypress
-// numGvm.addEventListener("keypress", errMsg);
-// numTare.addEventListener("keypress", enterKey);
-// numSeats.addEventListener("keypress", enterKey);
-
 // calculate based on formula & output on screen
 // (number of seats x 68) < (1/2 x GVM - Tare weight) = NA, esle MA
 // handle empty inputs
@@ -31,39 +26,44 @@ function calculate(evt) {
     let tare = document.getElementById("tare").value;
     let seats = document.getElementById("seats").value;
 
-    let carWeight = 0.5 * (gvm - tare);
+    let carWeight = (gvm - tare) / 2;
     let seatWeight = seats * 68;
 
-    // let result = "";
+    let result = "";
+
+    console.log(gvm);
+    console.log(tare);
+    console.log(seats);
 
     console.log(seatWeight);
     console.log(carWeight);
 
     if (seatWeight < carWeight) {
-        output.textContent = "NA";
+        result = "NA";
+        output.textContent = result;
         output.style.color = "black";
     } else if (seatWeight > carWeight) {
-        output.textContent = "MA";
+        result = "MA";
+        output.textContent = result;
         output.style.color = "black";
-    } else {
-        output.textContent = "Please enter data.";
+    }
+
+    if (!gvm) {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (!tare) {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (!seats) {
+        result = "Please enter data.";
+        output.textContent = result;
         output.style.color = "#c55155";
     }
 
-    // console.log(result);
+    console.log(result);
 }
-
-//function for enter key
-// function enterKey(evt) {
-//     if (evt.keyCode === 13) submitBtn.click();
-// }
-
-// function errMsg() {
-//     let numGvm = document.getElementById("gvm").value;
-//     if (numGvm.value == null) {
-//         output.style.color = "red";
-//     }
-// }
 
 // reset button
 function reset() {
