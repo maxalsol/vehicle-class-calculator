@@ -19,15 +19,19 @@ resetBtn.addEventListener("touchend", reset);
 // (number of seats x 68) < (1/2 x GVM - Tare weight) = NA, esle MA
 // handle empty inputs
 function calculate(evt) {
+    // prevent default form execution
     evt.preventDefault();
 
+    // variables
     let gvm = document.getElementById("gvm").value;
     let tare = document.getElementById("tare").value;
     let seats = document.getElementById("seats").value;
 
+    // calculation
     let carWeight = (gvm - tare) / 2;
     let seatWeight = seats * 68;
 
+    // result
     let result = "";
 
     console.log(gvm);
@@ -37,6 +41,7 @@ function calculate(evt) {
     console.log(seatWeight);
     console.log(carWeight);
 
+    // logic
     if (seatWeight < carWeight) {
         result = "NA";
         output.textContent = result;
@@ -47,6 +52,7 @@ function calculate(evt) {
         output.style.color = "black";
     }
 
+    // no input handling
     if (!gvm) {
         result = "Please enter data.";
         output.textContent = result;
@@ -61,6 +67,7 @@ function calculate(evt) {
         output.style.color = "#c55155";
     }
 
+    //result
     console.log(result);
 }
 
