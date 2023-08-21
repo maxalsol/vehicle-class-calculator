@@ -42,11 +42,12 @@ main {
     align-items: center;
     justify-content: center;
     padding-top: 40px;
+    text-align: left;
 }
 
 label {
     font-size: larger;
-    width: 375px;
+    width: 210px;
     text-align: left;
 }
 
